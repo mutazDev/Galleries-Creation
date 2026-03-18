@@ -1,10 +1,11 @@
 import React from 'react';
+import { Landmark } from 'lucide-react';
 
 export default function BasicInfoSection({ values, errors, touched, onChange }) {
   return (
     <section className="form-section">
       <div className="section-header">
-        <span className="section-icon">🏛️</span>
+        <Landmark />
         <h2>Basic Information</h2>
       </div>
 

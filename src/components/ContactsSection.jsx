@@ -1,4 +1,5 @@
 import React from 'react';
+import { Smartphone } from 'lucide-react';
 
 export default function ContactsSection({
   contacts,
@@ -11,7 +12,7 @@ export default function ContactsSection({
   return (
     <section className="form-section">
       <div className="section-header">
-        <span className="section-icon">📱</span>
+        <Smartphone />
         <h2>Contacts</h2>
       </div>
 

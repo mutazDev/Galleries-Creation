@@ -1,5 +1,6 @@
 import React, { useRef, useCallback, useEffect } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
+import { PenTool, Pencil, Upload, CloudUpload } from 'lucide-react';
 
 export default function SignatureSection({
   signature,
@@ -102,7 +103,7 @@ export default function SignatureSection({
   return (
     <section className="form-section">
       <div className="section-header">
-        <span className="section-icon">✍️</span>
+        <PenTool />
         <h2>Owner Signature</h2>
       </div>
 
@@ -118,15 +119,17 @@ export default function SignatureSection({
           type="button"
           className={`toggle-btn ${signatureMethod === 'draw' ? 'active' : ''}`}
           onClick={() => handleMethodSwitch('draw')}
+          style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
         >
-          ✏️ Draw
+          <Pencil size={18} /> Draw
         </button>
         <button
           type="button"
           className={`toggle-btn ${signatureMethod === 'upload' ? 'active' : ''}`}
           onClick={() => handleMethodSwitch('upload')}
+          style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
         >
-          📁 Upload PNG
+          <Upload size={18} /> Upload PNG
         </button>
       </div>
 
@@ -174,7 +177,7 @@ export default function SignatureSection({
               className="file-input-hidden"
               onChange={handleFileUpload}
             />
-            <span className="upload-icon">☁️</span>
+            <span className="upload-icon"><CloudUpload size={48} /></span>
             <span className="upload-text">
               Click to choose a PNG file or drag & drop
             </span>

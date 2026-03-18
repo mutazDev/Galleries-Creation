@@ -1,10 +1,11 @@
 import React from 'react';
+import { MapPin } from 'lucide-react';
 
 export default function AddressSection({ value, error, touched, onChange }) {
   return (
     <section className="form-section">
       <div className="section-header">
-        <span className="section-icon">📍</span>
+        <MapPin />
         <h2>Address</h2>
       </div>
 
